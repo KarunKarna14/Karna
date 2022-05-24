@@ -1,0 +1,9 @@
+package Generic;
+
+public class Base_Class
+{
+	@BeforMethod
+	public void openapp()
+	
+
+}

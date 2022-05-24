@@ -1,0 +1,24 @@
+package Generic;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+public class Base_Class implements Framework_Constants
+{
+	public WebDriverwait wait;
+	@BeforeMethod
+	public void openapp()
+	{
+	System.setProperty(GECKO_KEY, GECKO_VALUE);
+  WebDriver driver =new FirefoxDriver();
+	driver.get(URL);
+	WebdriverWait wait = new WebDriverWait(driver, 10);
+	
+	}
+	@AfterMethod
+	public void closeapp()
+	{
+		driver.close();
+	}
+}

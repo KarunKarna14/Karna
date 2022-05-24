@@ -1,0 +1,13 @@
+package Generic;
+
+import org.testng.annotations.BeforeMethod;
+
+public class Base_Class implements Framework_Constants
+{
+	@BeforeMethod
+	public void openapp()
+	{
+	System.setProperty(GECKO_KEY, GECKO_VALUE);
+    
+	}
+}
